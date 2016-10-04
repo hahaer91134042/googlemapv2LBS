@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="mapType">
+        <item>街道圖</item>
+        <item>衛星圖</item>
+        <item>地形圖</item>
+        <item>混合圖</item>
+        <item>顯示路況</item>
+        <item>隱藏路況</item>
+    </string-array>
+    <string-array name="location">
+        <item>目前位置,24.165146,120.688167</item>
+        <item>中區職訓,24.172127,120.610313</item>
+        <item>東海大學路思義教堂,24.179051,120.600610</item>
+        <item>台中公園湖心亭,24.144671,120.683981</item>
+        <item>秋紅谷,24.1674900,120.6398902</item>
+        <item>台中火車站,24.136829,120.685011</item>
+        <item>國立科學博物館,24.1579361,120.6659828</item>
+    </string-array>
+        <string name="locItem">顯示景點</string>
+        <string name="memberItem">顯示會員</string>
+        <string name="userItem">設定使用者</string>
+
+</resources>

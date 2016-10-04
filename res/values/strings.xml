@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">18-0 LBSMySQL-06</string>
+    <string name="action_settings">Settings</string>
+    <string name="prompt_select_location">請選擇位置:</string>
+    <string name="m1701_imgItem1">變更圖示</string>
+    
+    <string name="zoom_buttons">zoom放大縮小</string>
+    <string name="compass">Compass 指北針</string>
+    <string name="mylocation_button">我的位置 Button</string>
+    <string name="mylocation_layer">我的位置 Layout</string>
+    <string name="scroll">Scroll Gestures 手勢</string>
+    <string name="zoom_gestures">Zoom Gestures 手勢</string>
+    <string name="tilt">Tilt Gestures 手勢</string>
+    <string name="rotate">Rotate Gestures 手勢</string>
+    <string name="map_not_ready">Map 設置未完成</string>
+    
+</resources>

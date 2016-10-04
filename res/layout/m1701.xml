@@ -1,0 +1,235 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="100"
+    tools:context="tcnr06.com.M1801" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/spnLocation" />
+
+    <Spinner
+        android:id="@+id/spnLocation"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/prompt_select_location" />
+
+    <Spinner
+        android:id="@+id/spnMapType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spnLocation"
+        android:layout_toRightOf="@+id/spnLocation" />
+
+    <LinearLayout
+        android:id="@+id/linearMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:layout_toLeftOf="@+id/spnMapType"
+        android:alpha="100"
+        android:background="#6690EE90"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/nowUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用者:"
+            android:textColor="@drawable/deeppink" />
+
+        <TextView
+            android:id="@+id/m1701_T001"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:textColor="@drawable/blueviolet" />
+
+        <TextView
+            android:id="@+id/texZoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/map"
+            android:layout_toRightOf="@+id/m1701_T001"
+            android:text="目前Zoom:"
+            android:textColor="@drawable/hotpink" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollCheckBox"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_above="@id/linearMsg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/map"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="100dp"
+        android:background="#664169E1"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:id="@+id/setCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/zoom_buttons_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setZoomButtonsEnabled"
+                android:text="@string/zoom_buttons" />
+
+            <CheckBox
+                android:id="@+id/compass_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setCompassEnabled"
+                android:text="@string/compass" />
+
+            <CheckBox
+                android:id="@+id/mylocationbutton_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setMyLocationButtonEnabled"
+                android:text="@string/mylocation_button" />
+
+            <CheckBox
+                android:id="@+id/mylocationlayer_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setMyLocationLayerEnabled"
+                android:text="@string/mylocation_layer" />
+
+            <CheckBox
+                android:id="@+id/scroll_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setScrollGesturesEnabled"
+                android:text="@string/scroll" />
+
+            <CheckBox
+                android:id="@+id/zoom_gestures_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setZoomGesturesEnabled"
+                android:text="@string/zoom_gestures" />
+
+            <CheckBox
+                android:id="@+id/tilt_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setTiltGesturesEnabled"
+                android:text="@string/tilt" />
+
+            <CheckBox
+                android:id="@+id/rotate_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#66cccccc"
+                android:checked="true"
+                android:onClick="setRotateGesturesEnabled"
+                android:text="@string/rotate" />
+        </LinearLayout>
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/checkcontrol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/map"
+        android:layout_below="@id/spnLocation"
+        android:layout_marginTop="60dp"
+        android:background="#66FFE4E1"
+        android:text="控制鈕:開啟/關閉" />
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/aquamarine"
+        android:orientation="vertical"
+        android:visibility="visible" >
+        
+        <EditText
+            android:id="@+id/editTexUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="請輸入使用者名稱..."
+            android:inputType="textPersonName" >
+
+        <requestFocus />
+    </EditText>
+
+        <EditText
+            android:id="@+id/editTexUserGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="請輸入群組..."
+            android:inputType="number" />
+
+      
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/btnRegUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="註冊" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登入" />
+
+              <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="離開" />
+
+        </TableRow>
+
+    </LinearLayout>
+
+    
+
+</RelativeLayout>

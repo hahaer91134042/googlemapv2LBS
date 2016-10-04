@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="tcnr6.com.m1701.M1701" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    <item android:id="@+id/imgItem1" android:orderInCategory="1" android:title="@string/m1701_imgItem1"></item>
+    <item android:id="@+id/locItem" android:title="@string/locItem" android:orderInCategory="2"></item>
+    <item android:id="@+id/memberItem" android:title="@string/memberItem" android:orderInCategory="3"></item>
+    <item android:id="@+id/userItem" android:title="@string/userItem" android:orderInCategory="0"></item>
+
+</menu>
